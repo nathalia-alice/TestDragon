@@ -10,6 +10,7 @@ import { LoginComponent } from './components/login/login.component';
 import { DragonsListingComponent } from './components/dragons/dragons-listing/dragons-listing.component';
 import { DragonsCreateComponent } from './components/dragons/dragons-create/dragons-create.component';
 import { DragonsDeleteComponent } from './components/dragons/dragons-delete/dragons-delete.component';
+import { DragonsDetailsComponent } from './components/dragons/dragons-details/dragons-details.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { DragonsDeleteComponent } from './components/dragons/dragons-delete/drag
     DragonsListingComponent,
     DragonsCreateComponent,
     DragonsDeleteComponent,
+    DragonsDetailsComponent,
   ],
   imports: [
     BrowserModule,
