@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { DragonsListingComponent } from './components/dragons/dragons-listing/dragons-listing.component';
 import { DragonsCreateComponent } from './components/dragons/dragons-create/dragons-create.component';
+import { DragonsDeleteComponent } from './components/dragons/dragons-delete/dragons-delete.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { DragonsCreateComponent } from './components/dragons/dragons-create/drag
     LoginComponent,
     DragonsListingComponent,
     DragonsCreateComponent,
+    DragonsDeleteComponent,
   ],
   imports: [
     BrowserModule,
