@@ -8,12 +8,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { DragonsListingComponent } from './components/dragons/dragons-listing/dragons-listing.component';
+import { DragonsCreateComponent } from './components/dragons/dragons-create/dragons-create.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     DragonsListingComponent,
+    DragonsCreateComponent,
   ],
   imports: [
     BrowserModule,
