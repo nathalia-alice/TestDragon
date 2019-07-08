@@ -1,1 +1,47 @@
-<p>dragons-details works!</p>
+<div class="container">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>
+                <h2>
+                    <button class="pull-left" mat-button routerLink="/dragons">
+                        <i class="material-icons">keyboard_arrow_left</i>
+                    </button>
+                    {{title}} {{dragon?.name}}
+                </h2>
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Tipo</th>
+                        <th scope="col">Data de Criação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">{{dragon?.id}}</th>
+                        <td>{{dragon?.name}}</td>
+                        <td>{{dragon?.type}}</td>
+                        <td>{{dragon?.createdAt | date: 'dd/MM/yyyy'}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">Histórias</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{dragon?.histories}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </mat-card-content>
+    </mat-card>
+</div>
