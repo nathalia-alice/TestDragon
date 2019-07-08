@@ -1,0 +1,25 @@
+$dragon: #7b092b;
+$white: white;
+$facebook: #4267b2;
+
+mat-list{
+    padding-top: 50px;
+}
+
+.dragon{
+    background-color: $dragon;
+    color: $white;
+}
+
+.facebook{
+    background-color: $facebook;
+    color: $white;
+}
+
+.buttons{
+    padding-top: 20px;
+
+    button{
+        width: 200px;
+    }
+}
