@@ -1,1 +1,59 @@
-<p>dragons-listing works!</p>
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="offset-md-9 col-md-3">
+                <button mat-button class="background-dragon" matTooltipPosition="above" matTooltip="Criar Novo Dragão"
+                    routerLink="/dragon/create">Criar Novo Dragão</button>
+            </div>
+        </div>
+        <div class="mat-elevation-z8">
+            <mat-table [dataSource]="dragons">
+                <!-- coluna nome -->
+                <ng-container matColumnDef="nome">
+                    <mat-header-cell *matHeaderCellDef>Nome do Dragão</mat-header-cell>
+                    <mat-cell *matCellDef="let dragon">
+                        <button mat-button class="black" matTooltipPosition="above"
+                            matTooltip="Visualizar Detalhes do Dragão" [routerLink]="['/dragon/'+ dragon.id]">
+                            {{dragon.name}}
+                        </button>
+                    </mat-cell>
+                </ng-container>
+                <!-- coluna tipo -->
+                <ng-container matColumnDef="tipo">
+                    <mat-header-cell *matHeaderCellDef>Tipo</mat-header-cell>
+                    <mat-cell *matCellDef="let dragon">{{dragon.type}}</mat-cell>
+                </ng-container>
+                <!-- coluna data de criação -->
+                <ng-container matColumnDef="data-criacao">
+                    <mat-header-cell *matHeaderCellDef>Data de criação</mat-header-cell>
+                    <mat-cell *matCellDef="let dragon">{{dragon.createdAt | date: 'dd/MM/yyyy h:mm a'}}</mat-cell>
+                </ng-container>
+                <!-- coluna editar -->
+                <ng-container matColumnDef="editar">
+                    <mat-header-cell *matHeaderCellDef>Editar</mat-header-cell>
+                    <mat-cell *matCellDef="let dragon">
+                        <button mat-button class="black" matTooltipPosition="above" matTooltip="Editar Dragão"
+                            (click)="editDragon(dragon)">
+                            <i class="material-icons">edit</i>
+                        </button>
+                    </mat-cell>
+                </ng-container>
+                <!-- coluna excluir -->
+                <ng-container matColumnDef="excluir">
+                    <mat-header-cell *matHeaderCellDef>Excluir</mat-header-cell>
+                    <mat-cell *matCellDef="let dragon">
+                        <button mat-button class="dragon" matTooltipPosition="above" matTooltip="Excluir Dragão"
+                            (click)="deleteDragon(dragon)">
+                            <i class="material-icons">delete</i>
+                        </button>
+                    </mat-cell>
+                </ng-container>
+                <!-- colunas -->
+                <mat-header-row *matHeaderRowDef="columnsTable"></mat-header-row>
+                <mat-row *matRowDef="let dragon; columns: columnsTable"></mat-row>
+            </mat-table>
+        </div>
+        <!-- paginação -->
+        <mat-paginator [pageSizeOptions]="[10, 20, 50]"></mat-paginator>
+    </div>
+</div>
