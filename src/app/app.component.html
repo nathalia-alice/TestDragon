@@ -1,5 +1,11 @@
-<mat-toolbar color="accent">
-  <span>Dragões</span>
-  <span class="toolbar-spacer"></span>
-</mat-toolbar>
+<header>
+  <mat-toolbar class="background-dragon">
+    <div class="col-10 col-md-10 ">
+      <span routerLink="/">Dragões</span>
+    </div>
+    <div class="col-2 col-md-2">
+        <mat-icon (click)="deslogar();" matTooltipPosition="above" matTooltip="Deslogar">power_settings_new</mat-icon>
+    </div>
+  </mat-toolbar>
+</header>
 <router-outlet></router-outlet>

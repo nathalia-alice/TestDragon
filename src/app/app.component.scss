@@ -1,0 +1,22 @@
+$dragon: #7b092b;
+$white: white;
+
+.background-dragon{
+    background-color: $dragon;
+  
+    span{
+        color: $white;
+        font-family: 'MedievalSharp', cursive;
+        font-size: 28px;
+        cursor: pointer;
+
+        &:focus{
+            outline: none;
+        }
+    }
+    mat-icon{
+        padding-top: 20px;
+        color: $white;
+        cursor: pointer;
+    }
+}
