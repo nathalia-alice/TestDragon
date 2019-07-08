@@ -1,0 +1,40 @@
+$dragon: #7b092b;
+$white: white;
+
+#delete-dragon-modal{
+    width: 300px;
+    margin: auto;
+    padding-bottom: 40px;
+}
+
+mat-dialog-actions{
+    button{
+        width: 150px;
+    }
+}
+
+.mat-icon-button{
+    &:focus, &:hover{
+        outline: none;
+    }
+}
+
+h6{
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+h2{
+    color: $dragon;
+    font-family: "MedievalSharp", cursive;
+    font-weight: bold;
+}
+
+.dragon{
+    background-color: $dragon;
+    color: $white;
+}
+
+.close-modal{
+    float: right;
+}

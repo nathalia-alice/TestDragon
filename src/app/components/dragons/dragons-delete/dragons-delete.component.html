@@ -1,1 +1,17 @@
-<p>dragons-delete works!</p>
+<div class="container">
+    <button class="close-modal" mat-icon-button mat-button mat-dialog-close>
+        <i class="material-icons">close</i>
+    </button>
+    <div id="delete-dragon-modal">
+        <h2 mat-dialog-title>{{title}}</h2>
+        <mat-dialog-actions>
+            <h6>Você tem certeza que deseja excluir<br> "{{dialog.name}}" ?</h6>
+        </mat-dialog-actions>
+        <mat-dialog-actions>
+            <div class="row">
+                <button mat-raised-button mat-dialog-close>Não</button>
+                <button mat-raised-button class="dragon" type="submit" (click)="deleteDragon()">Sim</button>
+            </div>
+        </mat-dialog-actions>
+    </div>
+</div>
