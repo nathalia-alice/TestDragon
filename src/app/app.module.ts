@@ -1,8 +1,23 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
-import { MatToolbarModule, MatIconModule } from '@angular/material'; 
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import {
+  MatButtonModule,
+  MatIconModule,
+  MatToolbarModule,
+  MatListModule,
+  MatTooltipModule,
+  MatInputModule,
+  MatSnackBarModule,
+  MatTableModule,
+  MatPaginatorModule,
+  MatSortModule,
+  MatCardModule,
+  MatDialogModule
+} from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -29,11 +44,28 @@ import { DragonsEditComponent } from './components/dragons/dragons-edit/dragons-
     MatToolbarModule,
     MatIconModule,
     FlexLayoutModule,
+    MatButtonModule,
+    MatListModule,
+    MatTooltipModule,
+    MatInputModule,
+    MatSnackBarModule,
+    ReactiveFormsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatCardModule,
+    HttpClientModule,
+    MatDialogModule,
     AppRoutingModule
   ],
   providers: [],
   bootstrap: [
     AppComponent
+  ],
+  entryComponents: [
+    DragonsEditComponent,
+    DragonsDeleteComponent
   ]
 })
+
 export class AppModule { }
