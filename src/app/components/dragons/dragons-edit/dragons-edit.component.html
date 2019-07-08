@@ -1,1 +1,33 @@
-<p>dragons-edit works!</p>
+<div class="container">
+  <button class="close-modal" mat-icon-button mat-button mat-dialog-close>
+    <i class="material-icons">close</i>
+  </button>
+  <div id="edit-dragon-modal">
+    <h2 mat-dialog-title>{{title}}</h2>
+    <mat-dialog-actions>
+      <form [formGroup]="editForm">
+        <div class="row">
+          <div class="col-md-12">
+            <mat-form-field>
+              <input matInput type="text" placeholder="Nome" id="nome" name="nome" formControlName="name">
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput type="text" placeholder="Tipo" id="tipo" name="tipo" formControlName="type">
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput type="text" placeholder="Histórias" id="historias" name="historias"
+                formControlName="histories">
+            </mat-form-field>
+          </div>
+        </div>
+      </form>
+    </mat-dialog-actions>
+    <mat-dialog-actions>
+      <div class="row">
+        <button mat-raised-button mat-dialog-close>Voltar</button>
+        <button mat-raised-button class="dragon" type="submit" (click)="editDragon()"
+          [disabled]="!editForm.valid">Editar</button>
+      </div>
+    </mat-dialog-actions>
+  </div>
+</div>
